@@ -12,12 +12,15 @@ int main(){
 aWtlIGEgcG9pc29ub3VzIG11c2hyb29t";
     printf("Input: %s\n", hex_string);
     printf("Expected: %s\n", expected_string);
-    char *actual_string = hex_to_64(hex_string);
+    size_t bin_len = get_bin_len(hex_string);
+    byte *bin_str = hex_to_bin(hex_string, bin_len);
+    char *actual_string =  bin_to_b64(bin_str, bin_len);
     printf("Actual output: %s\n", actual_string);
     if(strcmp(expected_string, actual_string) == 0){
         puts("Output matches");
     }else{
         puts("Output does not match");
     }
+    free(actual_string);
     return 0;
 }

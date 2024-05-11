@@ -4,18 +4,21 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 //Base 64 table in order
 #define BASE_64_TABLE "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
-extern char binary_char_to_hex(char *);
+typedef unsigned char byte;
 
-extern char *binary_to_hex(char *);
+extern size_t get_bin_len(char *);
 
-extern char* hex_char_to_binary(char);
+extern byte *hex_to_bin(char *, size_t);
 
-extern char *hex_to_binary(char *);
+extern char *bin_to_hex(byte *, size_t);
 
-extern char *hex_to_64(char *);
+extern char *bin_to_b64(byte *, size_t);
+
+extern size_t b64_encoded_size(size_t);
 
 #endif

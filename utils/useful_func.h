@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-extern char char_xor(char, char);
-
-extern char *bin_xor(char *, char *);
+extern void bin_xor(unsigned char *, unsigned char *, size_t, size_t);
 
 #endif

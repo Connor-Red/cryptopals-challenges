@@ -6,3 +6,6 @@ This problem took me 1.5 hours mainly because I was unfamiliar with the finer po
 
 
 Update: moved the hex char to binary, hex to binary and hex to base64 functions out of the file as they are quite useful in future tasks
+
+Update 2: It turns out that a string representation of binary is not the way to go about solving the problem. I will change the functions
+to work with unsigned chars instead. The previous code has been archived in legacy_funcs
